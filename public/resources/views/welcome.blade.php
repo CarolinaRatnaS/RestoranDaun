@@ -87,7 +87,7 @@
                     <a href="https://instagram.com/carolinaratnas">Instagram</a>
                     <a href="https://api.whatsapp.com/send?phone=62895332868929&text=Halo%20Carolina%20Ratna%20Sari.">Whatsapp</a>
                     <a href="https://www.linkedin.com/in/carolina-ratna-sari/">LinkedIn</a>
-                    <a href="https://github.com/CarolinaRatnaS">GitHub</a>
+                    <a href="https://github.com/CarolinaRatnaS/RestoranDaun">GitHub</a>
                 </div>
             </div>
         </div>
