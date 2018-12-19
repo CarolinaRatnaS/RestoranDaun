@@ -16,4 +16,8 @@ class PesananDetail extends Model
     	'jumlah', 
     	'sub_total'
     ];
+
+    public function pesanan(){
+    	return $this->belongsTo('App\Pesanan');
+    }
 }

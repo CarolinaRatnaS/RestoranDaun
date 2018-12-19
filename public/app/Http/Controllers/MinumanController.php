@@ -10,7 +10,7 @@ use Auth;
 use DB;
 use Redirect;
 
-class MakananController extends Controller
+class MinumanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,22 +19,9 @@ class MakananController extends Controller
      */
     public function index()
     {
-        $produk = DB::table('produk')->where('kategori', '=', 'makanan')->get();
+        $produk = DB::table('produk')->where('kategori', '=', 'minuman')->get();
         // $produk = Produk::all();
-        return view('makanan.index', compact('produk'));
-    }
-
-    public function newSession()
-    {
-        $pesanan = new Pesanan;
-        $pesanan->id_user = Auth::user()->id;
-        $pesanan->total_item = 0;
-        $pesanan->total_harga = 0;
-        $pesanan->save();
-
-        session(['idpesanan' => $pesanan->id]);
-
-        return Redirect::route('makanan.index');
+        return view('minuman.index', compact('produk'));
     }
 
     /**
@@ -62,18 +49,7 @@ class MakananController extends Controller
         $pesanan->total_harga += $request['harga'];
         $pesanan->update();
 
-        return Redirect::route('makanan.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return Redirect::route('minuman.index');
     }
 
     /**
@@ -97,7 +73,7 @@ class MakananController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**

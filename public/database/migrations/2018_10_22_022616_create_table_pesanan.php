@@ -18,8 +18,6 @@ class CreateTablePesanan extends Migration
             $table->integer('id_user')->unsigned();
             $table->integer('total_item');
             $table->integer('total_harga');
-            $table->integer('bayar');
-            $table->integer('diterima');
             $table->timestamps();
         });
     }

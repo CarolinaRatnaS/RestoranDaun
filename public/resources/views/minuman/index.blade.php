@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-11 col-md-offset-0">
-            <h1>Makanan</h1>
+            <h1>Minuman</h1>
             <div class="panel panel-default">
                 @foreach($produk as $list)
                  <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
@@ -32,7 +32,7 @@
         </div>
     </div>
 </div>
-@include('makanan.add')
+@include('minuman.add')
 @endsection
 
 @section('script')
@@ -44,8 +44,8 @@
         $('#modal-form form').validator().on('submit', function(e) {
             if(!e.isDefaultPrevented()) {
                 var id = $('#id').val();
-                if(save_method == "add") url = "{{ route('makanan.store') }}";
-                else url = "makanan/"+id;
+                if(save_method == "add") url = "{{ route('minuman.store') }}";
+                else url = "minuman/"+id;
 
                 $.ajax({
                     url : url,
@@ -54,7 +54,7 @@
                     dataType: 'JSON',
                     success : function(data) {
                         $('#modal-form').modal('hide');
-                        url = "{{ route('makanan.index') }}";
+                        url = "{{ route('minuman.index') }}";
                     },
                     error : function() {
                         alert("Tidak dapat menyimpan data!");
@@ -71,7 +71,7 @@
         $('input[name=_method]').val('POST');
         $('#modal-form form')[0].reset();
         $.ajax({
-            url : "makanan/"+id+"/edit",
+            url : "minuman/"+id+"/edit",
             type : "GET",
             dataType : "JSON",
             success : function(data){

@@ -13,8 +13,10 @@ class Pesanan extends Model
     	'kode_member', 
     	'id_user', 
     	'total_item', 
-    	'total_harga', 
-    	'bayar', 
-    	'diterima'
+    	'total_harga'
     ];
+
+    public function pesanandetail(){
+    	return $this->hasMany('App\PesananDetail', 'id_pesanan');
+    }
 }
