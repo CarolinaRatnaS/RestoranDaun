@@ -55,9 +55,11 @@
                                     <li>
                                         <a href="{{ route('home') }}">Home</a>
                                     </li>
+                                    @if (Auth::user()->email == 'admin@mail.com')
                                     <li>
                                         <a href="{{ route('produk.index') }}">Produk</a>
                                     </li>
+                                    @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
